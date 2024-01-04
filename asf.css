@@ -1,0 +1,85 @@
+/* Стили для основной разметки */
+        body {
+            background-color: #808080;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed; 
+            text-align: center; /* Выравнивание по центру */
+        }
+        
+        #container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            line-height: 1.5;
+            color: #555;
+        }
+
+        /* Стили для вкладок */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .tab:hover {
+            background-color: #0056b3;
+        }
+
+        .tab.active {
+            background-color: #0056b3;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Стили для таблицы перед айфонами */
+        .textcols {
+	        display: table;
+	        width: 100%;
+	        border-collapse: collapse;
+        }
+
+        .textcols-row {
+	        display: table-row;
+        }
+
+        .textcols-item {
+	        display: table-cell;
+	        width: 33%;
+	        vertical-align: top;
+        	padding: 0;
+            opacity: 0
+	        border-right: 30px solid #fff;
+	        border-left: 30px solid #fff;
+        }
+
+        
+
+        .textcols-row .textcols-item:last-child {
+         	border-left: 10px;
+        }
+

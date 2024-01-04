@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="asf.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Айфоны популярный вид дорогих телефонов">
+    <meta name="Keywords" content="телефон, айфон">
+    <title>apple</title>
+    <link rel="shortcut icon" type="image/jpg" href="logo.ico">
+</head>
+<body>
+    <div id="container">
+          <h1><img src= "logo.png" height="35" width="30" alt="log"> apple</h1>
+
+          <div class="tabs">
+               <div class="tab active" onclick="showTab('tab1')"> Описание</div>
+               <div class="tab" onclick="showTab('tab2')"> История</div>
+               <div class="tab" onclick="showTab('tab3')">  Руководство</div>
+               <div class="tab" onclick="showTab('tab4')"> Продукция</div>
+           </div>
+           
+        <div class="tab-content active" id="tab1">
+            <p>американская корпорация, разработчик персональных и планшетных компьютеров, аудиоплееров, смартфонов.</p>
+        </div>
+
+        <div class="tab-content" id="tab2">
+            <p><a href="https://ru.wikipedia.org/wiki/Apple#%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F">прочитать можно тут</a></p>
+        </div>
+
+        <div class="tab-content" id="tab3">
+            <p><a href="https://ru.wikipedia.org/wiki/Apple#%D0%A1%D0%BE%D0%B1%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%B8%D0%BA%D0%B8_%D0%B8_%D1%80%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE">прочитать можно тут</a></p>
+        </div>
+
+        <div class="tab-content" id="tab4">
+            <p><a href="https://ru.wikipedia.org/wiki/Apple#%D0%94%D0%B5%D1%8F%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C">прочитать можно тут</a></p>
+        </div>
+
+        <h1>Новые айфоны</h1>
+
+<div class="textcols">
+	<div class="textcols-row">
+		<div class="textcols-item">
+			<b>iphon 13 pro max</b>
+		</div>
+
+		<div class="textcols-item">
+			<b>iphon 14 pro max</b>
+		</div>
+
+		<div class="textcols-item">
+			<b>iphon 15 pro max</b>
+		</div>
+	</div>
+</div>
+    <p>
+          <img src="i1.jpg" alt="Фотография 1" width="240" height="340">
+          <img src="i2.jpg" alt="Фотография 2" width="240" height="340">
+          <img src="i3.jpg" alt="Фотография 3" width="240" height="340">
+    </p>
+
+            <p><img src="ipoloska.png" alt="айфончик" width="800" height="200"></p>
+
+    <h1>Новинка!</h1>
+            <div class="pane">
+              <table>
+                <tr>
+                    <td>
+                        <img src="i3.jpg" height="500" width="400" alt="lt">
+                    </td>
+                    <td>
+                        <h1>iphon 15 pro max</h1>
+                        <p>Оперативная память: 6 ГБ. Накопитель: 128, 256, 512 ГБ NVMe. Аккумулятор: не менее 3279 мА·ч и 4325 мА·ч, быстрая проводная зарядка 20 Вт и беспроводная 15 Вт. Камеры: основная на 48 Мп с оптической стабилизацией, сверхширокоугольная на 12 Мп, фронтальная на 12 Мп.</p>
+                    </td>
+                </tr>
+              </table>
+            </div>
+
+</div>
+         <script>
+            container.onclick = function(event) {
+              if (event.target.className != 'remove-button') return;
+              let pane = event.target.closest('.pane');
+              pane.remove();
+            };
+          </script>
+
+<script>
+        // JavaScript для переключения вкладок
+        function showTab(tabId) {
+            // Скрыть все вкладки
+            var tabs = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove("active");
+            }
+
+            // Установить выбранную вкладку как активную
+            var tab = document.getElementById(tabId);
+            tab.classList.add("active");
+
+            // Установить выбранную вкладку как активную
+            var activeTabs = document.getElementsByClassName("tab");
+            for (var i = 0; i < activeTabs.length; i++) {
+                activeTabs[i].classList.remove("active");
+            }
+
+            // Установить выбранную вкладку как активную
+            var activeTab = document.querySelector(`.tab[data-tab="${tabId}"]`);
+            activeTab.classList.add("active");
+        }
+</script>
+
+</body>
+</html>
